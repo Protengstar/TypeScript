@@ -30,5 +30,29 @@ describe('Interface.test.ts', function () {
         expect(dictionary["name"]).toBe("sifaul");
         expect(dictionary["address"]).toBe("jember");
     });
+    // EXTENDING INTERFACE
+    it('should support extends interface', function () {
+        const employee = {
+            id: "1",
+            name: "musthofa",
+            division: "IT",
+        };
+        const manager = {
+            id: "2",
+            name: "sifaul",
+            division: "IT",
+            numberOfEmployees: 14,
+        };
+        console.info(manager);
+    });
+    it('should support function in interface', function () {
+        const person = {
+            name: "sifaul",
+            sayHello: function (name) {
+                return `Hello ${name}, my name is ${this.name}`;
+            }
+        };
+        console.info(person.sayHello("musthofa"));
+    });
 });
 export {};

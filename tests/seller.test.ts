@@ -1,4 +1,5 @@
 import { Employee, Manager } from "../src/employee";
+import { sayHello } from "../src/say-hello";
 import { Seller } from "../src/seller";
 
 describe('Interface.test.ts', function() {
@@ -57,5 +58,19 @@ describe('Interface.test.ts', function() {
             division: "IT",
             numberOfEmployees: 14,
         };
+        console.info(manager);
+    });
+    it('should support function in interface', function() {
+        interface Person {
+            name: string;
+            sayHello(name: string) : string;
+        }
+        const person: Person = {
+            name: "sifaul",
+            sayHello: function (name: string): string {
+                return `Hello ${name}, my name is ${this.name}`;
+            }
+        }
+        console.info(person.sayHello("musthofa"));
     });
 });
