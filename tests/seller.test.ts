@@ -14,4 +14,31 @@ describe('Interface.test.ts', function() {
         
         console.info(seller);
     });
+    it('should support function interface', function() {
+        interface AddFunction {
+            (value1: number, value2: number): number
+        }
+        const add: AddFunction = (value1: number, value2: number): number => {
+            return value1 + value2;
+        };
+        expect(add(2,3)).toBe(5);
+    });
+    it('should support indexable interface', function() {
+        interface StringArray {
+            [index: number]: string
+        }
+        const names : StringArray = ["MUSTHOFA", "SIFAUL", "QULUB"];
+        console.info(names);
+    });
+    it('should support indexable interface non number index', function() {
+        interface StringDictionary {
+            [key: string]: string;
+        }
+        const dictionary: StringDictionary = {
+            "name" : "sifaul",
+            "address" : "jember",
+        }
+        expect(dictionary["name"]).toBe("sifaul");
+        expect(dictionary["address"]).toBe("jember");
+    });
 });
