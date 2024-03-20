@@ -54,5 +54,12 @@ describe('Interface.test.ts', function () {
         };
         console.info(person.sayHello("musthofa"));
     });
+    it('should support intersrctioin types', function () {
+        const domain = {
+            id: "1",
+            name: "sifaul"
+        };
+        console.info(domain);
+    });
 });
 export {};

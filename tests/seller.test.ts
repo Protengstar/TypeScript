@@ -73,4 +73,19 @@ describe('Interface.test.ts', function() {
         }
         console.info(person.sayHello("musthofa"));
     });
+    it('should support intersrctioin types', function() {
+        interface HasName {
+            name: string
+        }
+        interface HasId {
+            id: string
+        }
+        type Domain = HasId & HasName;
+
+        const domain: Domain = {
+            id: "1",
+            name: "sifaul"
+        };
+        console.info(domain);
+    });
 });
