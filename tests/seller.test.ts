@@ -1,4 +1,5 @@
 import { Employee, Manager } from "../src/employee";
+import { Person } from "../src/person";
 import { sayHello } from "../src/say-hello";
 import { Seller } from "../src/seller";
 
@@ -61,10 +62,6 @@ describe('Interface.test.ts', function() {
         console.info(manager);
     });
     it('should support function in interface', function() {
-        interface Person {
-            name: string;
-            sayHello(name: string) : string;
-        }
         const person: Person = {
             name: "sifaul",
             sayHello: function (name: string): string {
@@ -87,5 +84,15 @@ describe('Interface.test.ts', function() {
             name: "sifaul"
         };
         console.info(domain);
+    });
+    it('should support type assertions', function() {
+        const person: any = {
+            name: "sifaul",
+            age: 18
+        };
+        const person2 : Person = person as Person;
+        // person2.sayHello("saya");
+        
+        console.info(person2);
     });
 });

@@ -61,5 +61,14 @@ describe('Interface.test.ts', function () {
         };
         console.info(domain);
     });
+    it('should support type assertions', function () {
+        const person = {
+            name: "sifaul",
+            age: 18
+        };
+        const person2 = person;
+        // person2.sayHello("saya");
+        console.info(person2);
+    });
 });
 export {};
