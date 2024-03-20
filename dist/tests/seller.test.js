@@ -10,12 +10,14 @@ describe('Interface.test.ts', function () {
         // seller.nib = "1234567890";
         console.info(seller);
     });
+    // FUNCTION INTERFACE
     it('should support function interface', function () {
         const add = (value1, value2) => {
             return value1 + value2;
         };
         expect(add(2, 3)).toBe(5);
     });
+    // INDEXABLE INTERFACE
     it('should support indexable interface', function () {
         const names = ["MUSTHOFA", "SIFAUL", "QULUB"];
         console.info(names);

@@ -14,6 +14,7 @@ describe('Interface.test.ts', function() {
         
         console.info(seller);
     });
+// FUNCTION INTERFACE
     it('should support function interface', function() {
         interface AddFunction {
             (value1: number, value2: number): number
@@ -23,6 +24,7 @@ describe('Interface.test.ts', function() {
         };
         expect(add(2,3)).toBe(5);
     });
+// INDEXABLE INTERFACE
     it('should support indexable interface', function() {
         interface StringArray {
             [index: number]: string
