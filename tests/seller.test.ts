@@ -1,3 +1,4 @@
+import { Employee, Manager } from "../src/employee";
 import { Seller } from "../src/seller";
 
 describe('Interface.test.ts', function() {
@@ -42,5 +43,19 @@ describe('Interface.test.ts', function() {
         }
         expect(dictionary["name"]).toBe("sifaul");
         expect(dictionary["address"]).toBe("jember");
+    });
+// EXTENDING INTERFACE
+    it('should support extends interface', function() {
+        const employee: Employee = {
+            id: "1",
+            name: "musthofa",
+            division: "IT",
+        };
+        const manager: Manager = {
+            id: "2",
+            name: "sifaul",
+            division: "IT",
+            numberOfEmployees: 14,
+        };
     });
 });
