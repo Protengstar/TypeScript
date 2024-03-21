@@ -12,6 +12,7 @@ describe('For Loop', function() {
             console.info(names[index]);
         }
     });
+// WHILE LOOP
     it('should support while loop', function() {
         let counter:number = 0;
         while(counter < 10) {
@@ -19,4 +20,12 @@ describe('For Loop', function() {
             counter++;
         }
     });
-})
+// DO WHILE LOOP
+    it('should support do while loop', function() {
+        let counter = 0;
+        do {
+            console.info(counter);
+            counter++;
+        } while (counter < 10);
+    });
+});
