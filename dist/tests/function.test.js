@@ -51,4 +51,19 @@ describe('Function', function () {
         expect(callMe(10)).toBe(100);
         expect(callMe('sifaul')).toBe('SIFAUL');
     });
+    it("should support function as parameter", function () {
+        function sayHello(name, filter) {
+            return `Hello ${filter(name)}`;
+        }
+        function toUpper(name) {
+            return name.toUpperCase();
+        }
+        expect(sayHello('sifaul', toUpper)).toBe('Hello SIFAUL');
+        // ANONYMOUS FUNCTION
+        expect(sayHello('sifaul', function (name) {
+            return name.toUpperCase();
+        })).toBe('Hello SIFAUL');
+        // ARROW FUNCTION
+        expect(sayHello('sifaul', (name) => name.toUpperCase())).toBe('Hello SIFAUL');
+    });
 });
